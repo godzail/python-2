@@ -8,10 +8,11 @@
   version     = "0.1.0"
 
   [tool.poetry.dependencies]
+    # duckdb           = "*"
+    # pyarrow          = "*"
     anytree          = "*"
     beautifulsoup4   = "*"
     datacompy        = "*"
-    duckdb           = "*"
     html5lib         = "*"
     httpx            = "*"
     humanize         = "*"
@@ -28,10 +29,9 @@
     polars           = { extras = ["all"], version = "*" }
     pretty-errors    = "*"
     psutil           = "*"
-    pyarrow          = "*"
     pydantic         = "*"
     pyperclip        = "*"
-    python           = "3.11.*"
+    python           = "3.12.*"
     python-box       = "*"
     python-dotenv    = "*"
     tabulate         = "*"
