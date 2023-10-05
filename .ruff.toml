@@ -1,0 +1,36 @@
+#:schema https://json.schemastore.org/ruff.json
+line-length   = 120
+output-format = "grouped"
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+target-version = "py311"
+# fix     = true
+# fixable = ["I001"]
+include = ["**/pyproject.toml", "*.ipynb", "*.py", "*.pyi"]
+
+per-file-ignores = {}
+select           = ["ALL"]
+
+# Rules: https://beta.ruff.rs/docs/rules/
+ignore = [
+    # "B008",   # do not perform function calls in argument defaults
+    # "BLE001", #Do not catch blind exception: {name}
+    # "C901",   # too complex
+    "ANN",  # Missing annotation
+    "D107", # Missing docstring in __init__
+    "D203", # 1 blank line required before class docstring
+    "D213", # Multi-line docstring summary should start at the second line
+    "INP",  # No PEP420 implicit namespace packages
+]
+
+[flake8-quotes]
+    docstring-quotes = "double"
+
+[mccabe]
+    # Unlike Flake8, default complexity level 10.
+    max-complexity = 15
+
+[pydocstyle]
+    convention = "google"

@@ -1,0 +1,81 @@
+#:schema https://json.schemastore.org/pyproject.json
+[tool.poetry]
+  authors     = ["Nic <nicola.sottani@gmail.com>"]
+  description = "Test Polars package"
+  license     = "MIT"
+  name        = "src"
+  readme      = "README.md"
+  version     = "0.1.0"
+
+  [tool.poetry.dependencies]
+    anytree          = "*"
+    beautifulsoup4   = "*"
+    datacompy        = "*"
+    duckdb           = "*"
+    html5lib         = "*"
+    httpx            = "*"
+    humanize         = "*"
+    joblib           = "*"
+    loguru           = "*"
+    matplotlib       = "*"
+    msoffcrypto-tool = "*"
+    numpy            = "*"
+    openpyxl         = "*"
+    orjson           = "*"
+    pandas           = "*"                                 # { extras = ["all"], version = "*" }
+    pi-heif          = "*"
+    pillow           = "*"
+    polars           = { extras = ["all"], version = "*" }
+    pretty-errors    = "*"
+    psutil           = "*"
+    pyarrow          = "*"
+    pydantic         = "*"
+    pyperclip        = "*"
+    python           = "3.11.*"
+    python-box       = "*"
+    python-dotenv    = "*"
+    tabulate         = "*"
+    tzdata           = "*"
+    wcwidth          = "*"
+    xlsx2csv         = "*"
+    xlsxwriter       = "*"
+
+  [tool.poetry.dev-dependencies]
+    bandit                   = "*"
+    black                    = { extras = ["jupyter"], version = "*" }
+    datamodel-code-generator = "*"
+    deptry                   = "*"
+    jupyterlab               = "*"
+    memory_profiler          = "*"
+    mkdocs                   = "*"
+    mkdocs-material          = "*"
+    mkdocstrings             = { extras = ["python"], version = "*" }
+    mypy                     = "*"
+    pdoc                     = "*"
+    pip                      = "*"
+    pipdeptree               = "*"
+    pytest                   = "*"
+    ruff                     = "*"
+    sourcery                 = "*"
+    taskipy                  = "*"
+    typer                    = { extras = ["all"], version = "*" }
+    types-pytz               = "*"
+    types-tabulate           = "*"
+    vulture                  = "*"
+
+[build-system]
+  build-backend = "poetry.core.masonry.api"
+  requires      = ["poetry-core>=1.0.0"]
+
+[tool.taskipy.tasks]
+  apicli = "python cli.py"
+
+[tool.poetry.scripts]
+  apicli = "cli.main:app"
+
+  # [tool.poetry.scripts]
+  #   go = "src._main:main"     = ["poetry-core>=1.0.0"]
+
+[tool.isort]
+  # make it compatible with black
+  profile = "black"
