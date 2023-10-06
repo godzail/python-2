@@ -31,5 +31,19 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
-    "python.formatting.provider": "none"
+    "favorites.resources": [
+        {
+            "filePath": ".ruff.toml",
+            "group": "Default"
+        },
+        {
+            "filePath": "pyproject.toml",
+            "group": "Default"
+        },
+        {
+            "filePath": "_main.py",
+            "group": "Default"
+        }
+    ],
+    "favorites.sortOrder": "MANUAL"
 }
